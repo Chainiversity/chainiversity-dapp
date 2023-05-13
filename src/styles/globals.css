@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, rgb(250, 48, 189) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, rgb(79, 255, 208) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, rgb(8, 78, 242) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, rgb(86, 196, 255) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+}
+
+.logo_text {
+  @apply max-sm:hidden text-2xl font-semibold text-black tracking-wide;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+}
+
+/* Flex */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
