@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} h-full`}>
         <div className="main">
           <div className="gradient" />
         </div>
@@ -24,7 +24,7 @@ export default function RootLayout({
         <header>
           <Nav />
         </header>
-        <main className="app">{children}</main>
+        <main className="app h-full">{children}</main>
       </body>
     </html>
   );
