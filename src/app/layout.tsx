@@ -1,13 +1,45 @@
+"use client";
+
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 
-const inter = Inter({ subsets: ["latin"] });
+import '@rainbow-me/rainbowkit/styles.css';
 
-export const metadata = {
-  title: "Chainiversity",
-  description: "Learn Chainlink Development with Chainiversity",
-};
+import {
+  RainbowKitProvider,
+  connectorsForWallets
+} from '@rainbow-me/rainbowkit';
+import {metaMaskWallet} from '@rainbow-me/rainbowkit/wallets';
+
+import { WagmiConfig, configureChains, createConfig } from "wagmi";
+import { publicProvider } from "wagmi/providers/public";
+// chains and connectors
+import { polygonMumbai } from "wagmi/chains";
+
+const { chains, publicClient, webSocketPublicClient } = configureChains(
+  [polygonMumbai],
+  [publicProvider()]
+);
+
+const connectors = connectorsForWallets([
+  {
+    groupName: 'Wallets',
+    wallets: [
+      metaMaskWallet({chains})
+    ],
+  },
+]);
+
+const config = createConfig({
+  autoConnect: true,
+  connectors: connectors,
+  publicClient,
+  webSocketPublicClient,
+});
+
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -16,15 +48,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Chainiversity</title>
+        <meta
+          name="description"
+          content="Learn Chainlink Development with Chainiversity"
+        ></meta>
+      </head>
       <body className={`${inter.className} h-full`}>
         <div className="main">
           <div className="gradient" />
         </div>
-
-        <header>
-          <Nav />
-        </header>
-        <main className="app h-full">{children}</main>
+        <WagmiConfig config={config}>
+        <RainbowKitProvider modalSize="compact" chains={chains}>
+        
+          <header>
+            <Nav />
+          </header>
+          <main className="app h-full">{children}</main>
+      </RainbowKitProvider>
+        </WagmiConfig>
       </body>
     </html>
   );

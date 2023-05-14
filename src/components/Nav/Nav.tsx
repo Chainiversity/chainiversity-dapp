@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 function Nav() {
+
   return (
     <nav className="flex-between w-full mb-16 pt-6 mx-auto sm:px-16 px-6">
       <Link href={"/"} className="flex gap-2 flex-center">
@@ -14,6 +19,7 @@ function Nav() {
         />
         <h2 className="logo_text blue_gradient">Chainiversity</h2>
       </Link>
+      <ConnectButton showBalance={false}/>
     </nav>
   );
 }
