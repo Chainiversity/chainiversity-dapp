@@ -31,7 +31,6 @@
     "tls": false
   },
   "devDependencies": {
-    "encoding": "^0.1.13",
-    "hardhat": "^2.14.0"
+    "encoding": "^0.1.13"
   }
 }
