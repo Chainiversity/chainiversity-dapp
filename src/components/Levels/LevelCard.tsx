@@ -27,7 +27,8 @@ const LevelCard: NextPage<Props> = ({ nftPhoto, levelName, date, levelAddress })
               {levelName}
             </Link>
           </h3>
-          <p className="text-grey-darker text-sm">{date}</p>
+          {/* <p className="text-grey-darker text-sm">{date}</p> */} 
+          {/* TODO: show many times that nft minted */}
         </div>
       </article>
     </div>
