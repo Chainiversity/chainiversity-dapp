@@ -1,7 +1,7 @@
 import LevelCard from "./LevelCard";
-import vrf from "public/assets/images/nfts/vrf.jpeg";
-import priceFeed from "public/assets/images/nfts/price-feed.jpeg";
-import automation from "public/assets/images/nfts/automation.jpeg";
+import vrf from "public/assets/images/nfts/vrf.jpg";
+import priceFeed from "public/assets/images/nfts/price-feed.jpg";
+import automation from "public/assets/images/nfts/automation.jpg";
 
 function LevelCardList() {
   return (
@@ -16,18 +16,18 @@ function LevelCardList() {
       </div>
       <div className="w-full md:w-1/2 lg:w-1/3">
         <LevelCard
-          levelAddress="priceFeed"
-          levelName="PRICE FEED"
-          date="14/05/23"
-          nftPhoto={priceFeed}
-        />
-      </div>
-      <div className="w-full md:w-1/2 lg:w-1/3">
-        <LevelCard
           levelAddress="automation"
           levelName="AUTOMATION"
           date="18/05/23"
           nftPhoto={automation}
+        />
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/3">
+        <LevelCard
+          levelAddress="priceFeed"
+          levelName="PRICE FEED"
+          date="14/05/23"
+          nftPhoto={priceFeed}
         />
       </div>
     </div>
