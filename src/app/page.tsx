@@ -12,7 +12,9 @@ export default function Home() {
       <p className="desc text-center">
         Chainlink your smart contracts, earn NFT certificates!
       </p>
-      <LevelCardList/>
+      <div className="mt-5">
+        <LevelCardList />
+      </div>
     </section>
   );
 }
