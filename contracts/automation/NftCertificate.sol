@@ -10,7 +10,6 @@ interface IOwnership {
     function owner() external view returns (address);
 }
 
-//Certificate address: 0x07C126EdC10A12876E9A719B97c8B6AcD8Abb14b
 contract AutomationCertificate is ERC721, Ownable {
     using Counters for Counters.Counter;
 
@@ -52,12 +51,12 @@ contract AutomationCertificate is ERC721, Ownable {
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
-       return "ipfs://QmaLvS3F5vRPAq9fJcAGArra9Uce6cMse7eL8ia5C2hpKB/";
+       return "ipfs://QmPhNvYuKELnR64HEkBQStPsRTLrMkHakRvwGCZCACZPrB/";
     }
 
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
         string memory baseURI = _baseURI();
-        return bytes(baseURI).length != 0 ? string(abi.encodePacked(baseURI, "1.json")) : '';
+        return bytes(baseURI).length != 0 ? string(abi.encodePacked(baseURI, "automation.json")) : '';
     }
 }
