@@ -3,58 +3,66 @@ import Level from "@/components/Levels/Level";
 import vrfPhoto from "public/assets/images/nfts/vrf.jpg";
 
 function vrf() {
-  return (
-    <Level
-      nftPhoto={vrfPhoto}
-      levelName={"VRF"}
-      date={"13/05/23"}
-      levelAddress={"vrf"}
-    >
-      <h1>
-        <b>Level Name</b>
-      </h1>
-      <br />
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores a
-        autem enim. Ipsum tenetur error, ut molestiae tempore necessitatibus
-        sunt in voluptates deleniti ipsa neque voluptas officiis repudiandae
-        accusamus. Inventore! Quas aspernatur error at obcaecati dolores quaerat
-        facilis, possimus optio voluptas dicta mollitia nemo quibusdam
-        consequuntur architecto necessitatibus perspiciatis, aliquid ut quis
-        nihil fugit! Ratione cumque maiores numquam animi. Maiores? Provident
-        magni nam iusto! Cum sit numquam, asperiores cupiditate, qui odit
-        molestias veniam ducimus vitae ipsa magnam officiis ea non soluta
-        aperiam, quaerat placeat maiores minus dignissimos iste culpa assumenda!
-        Et consequatur molestias debitis eligendi reiciendis
-      </p>
-      <br />
-      <p>
-        dolores similique nobis, veniam perferendis dolorem, blanditiis sed,
-        molestiae consequuntur rem nam ad maxime? Cum odit magni, non atque
-        aspernatur quae minima alias corporis? Non quia, ullam velit eos quae
-        nam nihil veritatis accusantium quo assumenda voluptatem iste
-        perferendis, fuga quis veniam vero. Aliquid eaque libero eos rerum
-        temporibus repellat veniam nemo nam explicabo! Iure dolorum laboriosam
-        aliquid fugit vero, fugiat modi. Distinctio consequuntur ipsam sunt
-        obcaecati vitae et eveniet praesentium. Quas quod numquam, blanditiis
-        molestias ipsum voluptates natus ex, adipisci saepe eveniet optio?
-        Corporis at odio ab quae voluptate porro quidem, culpa tempora eos
-        reiciendis eligendi nisi, rem maiores quod. Ducimus amet enim porro
-        incidunt excepturi, nostrum iure dolor impedit, totam, accusantium
-        saepe! Minima doloribus amet, optio consequatur a exercitationem ipsa
-        natus maxime delectus. Tenetur similique magnam pariatur ducimus
-        obcaecati commodi excepturi ipsam assumenda nemo id, repellendus amet?
-        Ut error obcaecati vitae vero! Rerum corrupti optio, ex ducimus eos
-        officiis corporis sunt officia quas? Ducimus cumque recusandae
-        architecto aliquam! Itaque doloremque quaerat eaque consequuntur
-        incidunt, voluptatem provident, distinctio laborum non consectetur sequi
-        voluptate. Expedita perspiciatis facilis, distinctio culpa quidem
-        provident. Libero molestiae inventore magni cum voluptatem, deserunt
-        aliquid laboriosam officiis atque nihil sint suscipit a id
-        necessitatibus debitis assumenda unde quaerat similique at?
-      </p>
-    </Level>
-  );
+    return (
+        <Level nftPhoto={vrfPhoto}
+            levelName={"NFT Certificate - Chainlink VRF"}
+            date={"13/05/23"}
+            levelAddress={""}>
+            <h1>
+                <b>VRF Level</b>
+            </h1>
+            <br/>
+            <p>In this level of Chainiversity, you will be asked to integrate
+                <a href="https://docs.chain.link/vrf/v2/introduction/">
+                    Chainlink VRF
+                </a>
+                (Verifiable Randomness Function) into your smart contract. If you integrate it correctly, and follow the instructions below, you will pass this level and you will be able to claim your NFT certificate for your web3 dev portfolio!</p>
+            <p>Note that you must utilize Polygon Mumbai testnet in order to submit a solution contract. To pay for gas fees and contract creation, you must have test MATIC: reach MATIC faucet
+                <a href="https://faucet.polygon.technology/">here</a>
+                or
+                <a href="https://mumbaifaucet.com/">here</a>. To use Chainlink services, you will need LINK token on the Mumbai testnet, reach the faucet
+                <a href="https://faucets.chain.link/mumbai">here</a>
+            </p>
+            <br/>
+            <h2>
+                <b>Requirements</b>
+            </h2>
+            <ul>
+                <li>Basic knowledge of Chainlink and its VRF product.</li>
+                <li>Basic knowledge of Solidity and Remix. A beginner? No worries, you can go from zero to hero
+                    <a href="https://www.youtube.com/watch?v=gyMwXuJrbJQ">
+                        here</a>.</li>
+                <li>Understanding of
+                    <a href="https://www.alchemy.com/overviews/solidity-interface">
+                        interfaces
+                    </a>
+                    in Solidity.</li>
+            </ul>
+            <br/>
+            <h2>
+                <b>Level Task</b>
+            </h2>
+            <p>In order to pass this level, the task is very simple:
+                <strong>getting a VRF output from the Chainlink network with subscription method</strong>. You should be warned that returning a number made up by yourself does not work, and this transaction will revert. We suggest that you integrate the Chainlink VRF correctly by following the Chainlink documentation and the instructions below to pass the level!</p>
+            <br/>
+            <p>There is a level manager contract developed by Chainiversity team that will validate if your contract calls for a VRF output. The address is: 0x000000000000000000000000</p>
+            <p>In order for the manager contract to check if you passed the level, you must implement the interface:
+                <code>function checkAnswer(address, address) external;</code>. The first address is your EVM account address, and the second one is the address of your solution contract. The manager contract will check if the first address parameter is the owner of the provided contract address using
+                <a href="https://docs.openzeppelin.com/contracts/4.x/api/access">OpenZeppelin&#39;s Ownable imported contract</a>.
+                <strong>Be careful here: the owner of the contract will be able to claim the NFT certificate.</strong>
+                If your transaction is not reverted, you will be able to claim your NFT certificate with the mint button on this page.
+            </p>
+            <p></p>
+            <br/>
+            <h2>
+                <b>Some tips</b>
+            </h2>
+            <p>Knowing where to implement the
+                <code>checkAnswer()</code>
+                interface function is important. There are two types of functions that need to be implemented in a VRF contract, try to think of where to call the function from the manager contract.</p>
+            <p>As validating the contract will consume some amount of gas, you may consider increasing the callback gas limit for the VRF contract. Also, considering funding your subscription with enough LINK.</p>
+        </Level>
+    );
 }
 
 export default vrf;

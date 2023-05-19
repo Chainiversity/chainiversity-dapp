@@ -34,12 +34,12 @@ const Level: NextPage<Props> = ({
       {
         ...vrfContract,
         functionName: "winners",
-        args: ["0xFf9616b10E82baE7c8eb98542f9799087D2087c5"],
+        args: ["0x203560aCa0Aa5AAc09d9708CE29b60Aa3E4366A8"],
       },
       {
         ...vrfContract,
         functionName: "canMint",
-        args: ["0xFf9616b10E82baE7c8eb98542f9799087D2087c5"],
+        args: ["0x203560aCa0Aa5AAc09d9708CE29b60Aa3E4366A8"],
       },
     ],
     watch: true,
