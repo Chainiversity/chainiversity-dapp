@@ -1,5 +1,5 @@
 export const vrfContract = {
-  address: `${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}` as string,
+  address: `${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}` as `0x${string}`,
   abi: [
     {
       inputs: [],
