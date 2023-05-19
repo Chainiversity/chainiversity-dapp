@@ -1,5 +1,5 @@
 export const vrfContract = {
-  address: "0x6dCc5946F1C1Dec3C18B790671168F802Bc90942",
+  address: "0xBA6dAcFd00dc75517636496bC457C7BB61e85c69",
   abi: [
     {
       inputs: [],
