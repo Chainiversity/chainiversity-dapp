@@ -92,13 +92,19 @@ function vrf() {
       <br />
       <p>
         There is a level manager contract developed by Chainiversity team that
-        will validate if your contract calls for a VRF output. The address is:
-        0x000000000000000000000000
+        will validate if your contract calls for a VRF output. 
+        The Chainiversity Level Manager contract is {" "}
+        <Link
+          className="docs_link"
+          href="https://mumbai.polygonscan.com/address/0x8d10bf427bdd09ae935b61554d5034c4a5a8aa40"
+        >
+          here
+        </Link>.
       </p>
       <p>
         In order for the manager contract to check if you passed the level, you
         must implement the interface:
-        <code>function checkAnswer(address, address) external;</code>. The first
+        <code> function checkAnswer(address, address) external;</code>. The first
         address is your EVM account address, and the second one is the address
         of your solution contract. The manager contract will check if the first
         address parameter is the owner of the provided contract address using{" "}

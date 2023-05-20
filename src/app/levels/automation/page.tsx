@@ -88,7 +88,13 @@ function automation() {
       </h2>
       <p>
         In this level, you should create a function that will register your
-        contract at the level manager contract whose address is 0x000000000000
+        contract at the level manager contract whose address is {" "}
+        <Link
+          className="docs_link"
+          href="https://mumbai.polygonscan.com/address/0x770060AFfA4AabeaDb652e4ba8829F3506bAA3e2"
+        >
+          here
+        </Link> {" "}
         using the interface
         <code> function registerContract() external;</code>. Registering is
         essential in order to pass the level.

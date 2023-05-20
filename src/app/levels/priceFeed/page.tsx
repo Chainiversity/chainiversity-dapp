@@ -83,8 +83,13 @@ function priceFeed() {
         <Link className="docs_link" href="https://docs.chain.link/data-feeds/price-feeds/addresses?network=polygon#Mumbai%20Testnet">
           <strong> MATIC/USD </strong>
         </Link>
-        Price Feeds. Chainiversity level manager contract is
-        0x000000000000000000.
+        Price Feeds. Chainiversity Level Manager contract is {" "}
+        <Link
+          className="docs_link"
+          href="https://mumbai.polygonscan.com/address/0xF6eA5735CF1315C7bb339f9c81D2AFeB800640E7"
+        >
+          here
+        </Link>.
       </p>
       <p>
         In order to send MATIC to the manager contract, use the following
