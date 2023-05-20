@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  li{
+    @apply ml-5
+  }
+}
+
 .gradient {
   height: fit-content;
   z-index: 3;
@@ -41,6 +47,10 @@
 
 .blue_gradient {
   @apply bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent;
+}
+
+.docs_link {
+  @apply font-medium text-blue-600 no-underline dark:text-blue-500 hover:underline
 }
 
 .desc {

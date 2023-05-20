@@ -11,22 +11,28 @@ import {
   useContractReads,
 } from "wagmi";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { vrfContract } from "../../../../contracts/vrf-test";
+import { abi } from "../../../../contracts/abi-test";
 import { useIsMounted } from "@/hooks/useIsMounted";
 
-function LevelButtons() {
+interface LevelButtonsProps {
+  levelAddress: `0x${string}`;
+}
+
+const LevelButtons: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
   const mounted = useIsMounted();
   const { address, isConnected } = useAccount();
 
   const { data: contractData } = useContractReads({
     contracts: [
       {
-        ...vrfContract,
+        address: levelAddress,
+        abi: abi,
         functionName: "winners",
         args: [address as `0x${string}`],
       },
       {
-        ...vrfContract,
+        address: levelAddress,
+        abi: abi,
         functionName: "canMint",
         args: [address as `0x${string}`],
       },
@@ -35,12 +41,14 @@ function LevelButtons() {
   });
 
   const { config: mintConfig } = usePrepareContractWrite({
-    ...vrfContract,
+    address: levelAddress,
+    abi: abi,
     functionName: "safeMint",
   });
 
   const { config: setLevelCompletedconfig } = usePrepareContractWrite({
-    ...vrfContract,
+    address: levelAddress,
+    abi: abi,
     functionName: "setLevelCompleted",
   });
 
@@ -48,7 +56,6 @@ function LevelButtons() {
     useContractWrite(mintConfig);
   const { write: changeCanMint, isSuccess: isChangedCanMintSuccess } =
     useContractWrite(setLevelCompletedconfig);
-
 
   // to solce hydration errors
   if (!mounted) return null;
@@ -153,13 +160,13 @@ function LevelButtons() {
       )}
     </>
   );
-}
+};
 
 interface Props {
   nftPhoto: StaticImageData; // TODO: NFT URI
   levelName: string;
   date: string;
-  levelAddress: string;
+  levelAddress: `0x${string}`;
   children: React.ReactNode;
 }
 
@@ -180,7 +187,7 @@ const Level: NextPage<Props> = ({
           nftPhoto={nftPhoto}
         />
         <div className="w-full px-1 md:px-4 space-y-2">
-          <LevelButtons />
+          <LevelButtons levelAddress={levelAddress} />
         </div>
       </div>
       <div className="lg:w-5/8 md:w-4/8 w-full">
