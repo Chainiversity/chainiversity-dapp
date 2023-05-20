@@ -51,7 +51,7 @@ const MintButton: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
 const LevelButtons: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
   const mounted = useIsMounted();
   const { address, isConnected } = useAccount();
-
+  
   const { data: contractData } = useContractReads({
     contracts: [
       {
@@ -129,7 +129,7 @@ const LevelButtons: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
       </ConnectButton.Custom>
     );
   }
-
+  console.log(contractData?.[0].result, contractData?.[1].result);
   return (
     <>
       {!contractData?.[0].result && (
