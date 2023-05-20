@@ -9,14 +9,44 @@ import {
   usePrepareContractWrite,
   useContractWrite,
   useContractReads,
+  useWaitForTransaction,
 } from "wagmi";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { abi } from "../../../../contracts/abi-test";
 import { useIsMounted } from "@/hooks/useIsMounted";
+import Link from "next/link";
 
 interface LevelButtonsProps {
   levelAddress: `0x${string}`;
 }
+
+const MintButton: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
+  const { config: mintConfig } = usePrepareContractWrite({
+    address: levelAddress,
+    abi: abi,
+    functionName: "safeMint",
+  });
+
+  const {
+    write: mint,
+    isLoading: isMintLoading,
+    isSuccess: isMintStarted,
+  } = useContractWrite(mintConfig);
+  
+  return (
+    <button
+      className="rounded-lg shadow-lg w-full bg-blue-700 text-white p-4 disabled:opacity-25 disabled:cursor-not-allowed"
+      onClick={() => mint?.()}
+      disabled={isMintLoading || isMintStarted}
+      data-mint-loading={isMintLoading}
+      data-mint-started={isMintStarted}
+    >
+      {isMintLoading && "Waiting for approval"}
+      {isMintStarted && "Minting..."}
+      {!isMintLoading && !isMintStarted && "Mint"}
+    </button>
+  );
+};
 
 const LevelButtons: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
   const mounted = useIsMounted();
@@ -40,24 +70,7 @@ const LevelButtons: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
     watch: true,
   });
 
-  const { config: mintConfig } = usePrepareContractWrite({
-    address: levelAddress,
-    abi: abi,
-    functionName: "safeMint",
-  });
-
-  const { config: setLevelCompletedconfig } = usePrepareContractWrite({
-    address: levelAddress,
-    abi: abi,
-    functionName: "setLevelCompleted",
-  });
-
-  const { write: mint, isSuccess: isMintSuccess } =
-    useContractWrite(mintConfig);
-  const { write: changeCanMint, isSuccess: isChangedCanMintSuccess } =
-    useContractWrite(setLevelCompletedconfig);
-
-  // to solce hydration errors
+  // to solve hydration errors
   if (!mounted) return null;
 
   // connect to wallet
@@ -121,41 +134,31 @@ const LevelButtons: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
     <>
       {!contractData?.[0].result && (
         <>
-          <div className="w-full text-red-700 mb-2">
+          <div className="w-full text-red-700 mt-10 mb-2 text-center text-xl">
             You have not succesfully completed the level yet!
           </div>
           <button
             className="rounded-lg shadow-lg w-full bg-blue-700 text-white p-4 disabled:opacity-25 disabled:cursor-not-allowed"
-            onClick={() => changeCanMint?.()}
-            disabled={contractData?.[0].result}
+            onClick={() => {}}
+            disabled={true}
           >
-            Complete Level
+            Complete Level First!
           </button>
         </>
       )}
       {contractData?.[0].result && contractData?.[1].result && (
         <>
-          <div className="w-full text-teal-700 mb-2">You can mint!</div>
-          <button
-            className="rounded-lg shadow-lg w-full bg-blue-700 text-white p-4 disabled:opacity-25 disabled:cursor-not-allowed"
-            onClick={() => mint?.()}
-            disabled={!contractData?.[0].result}
-          >
-            Mint
-          </button>
+          <div className="w-full text-teal-700 mt-10 mb-2 text-center text-xl">
+            You can mint!
+          </div>
+          <MintButton levelAddress={levelAddress} />
         </>
       )}
       {contractData?.[0].result && !contractData?.[1].result && (
         <>
-          <div className="w-full text-blue-700 mb-2">
-            You have already minted!
+          <div className="w-full text-blue-700 mt-10 mb-2 text-center text-xl">
+            You have passed the level!
           </div>
-          <button
-            className="rounded-lg shadow-lg w-full bg-teal-700 text-white p-4"
-            onClick={() => null}
-          >
-            Show My Nft
-          </button>
         </>
       )}
     </>
