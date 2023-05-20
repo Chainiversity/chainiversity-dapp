@@ -5,7 +5,7 @@ import automation from "public/assets/images/nfts/automation.jpg";
 
 function LevelCardList() {
   return (
-    <div className="flex flex-wrap mt-10 -mx-1 lg:-mx-4 w-full">
+    <div className="flex flex-wrap mt-5 -mx-1 lg:-mx-4 w-full">
       <div className="w-full md:w-1/2 lg:w-1/3 mb-10 lg:mb-0">
         <LevelCard
           levelAddress="vrf"

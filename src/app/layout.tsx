@@ -64,7 +64,7 @@ export default function RootLayout({
             <main className="app h-full">{children}</main>
 
             <div className="mt-20">
-            <footer className="fixed bottom-0 bg-indigo-500 text-indigo-50 p-2 w-screen z-50">
+            <footer className="fixed bottom-0 bg-gradient-to-r from-blue-700 to-blue-500 text-white p-2 w-screen z-50">
               StickyFooter
             </footer>
             </div>
@@ -72,6 +72,6 @@ export default function RootLayout({
           </RainbowKitProvider>
         </WagmiConfig>
       </body>
-    </html>
+    </html> 
   );
 }
