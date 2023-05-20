@@ -1,6 +1,7 @@
 import React from "react";
 import Level from "@/components/Levels/Level";
 import feedPhoto from "public/assets/images/nfts/price-feed.jpg";
+import {addresses} from "../../../../contracts/addresses";
 import Link from "next/link";
 
 function priceFeed() {
@@ -10,7 +11,7 @@ function priceFeed() {
       levelName={"NFT Certificate - Chainlink Price Feed"}
       date={"13/05/23"}
       levelAddress={
-        `${process.env.NEXT_PUBLIC_TEST_CONTRACT_ADDRESS}` as `0x${string}`
+        `${addresses.priceFeedAddress}` as `0x${string}`
       }
     >
       <h1>

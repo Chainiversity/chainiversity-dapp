@@ -1,6 +1,7 @@
 import React from "react";
 import Level from "@/components/Levels/Level";
 import automationPhoto from "public/assets/images/nfts/automation.jpg";
+import {addresses} from "../../../../contracts/addresses";
 import Link from "next/link";
 
 function automation() {
@@ -10,7 +11,7 @@ function automation() {
       levelName={"NFT Certificate - Chainlink Automation"}
       date={"13/05/23"}
       levelAddress={
-        `${process.env.NEXT_PUBLIC_TEST_CONTRACT_ADDRESS}` as `0x${string}`
+        `${addresses.automationAddress}` as `0x${string}`
       }
     >
       <h1>
