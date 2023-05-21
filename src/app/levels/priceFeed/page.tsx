@@ -29,9 +29,9 @@ function priceFeed() {
         Note that you must utilize Polygon Mumbai testnet in order to submit a
         solution contract. To pay for gas fees and contract creation, you must
         have test MATIC: reach MATIC faucet
-        <Link className="docs_link" href="https://faucet.polygon.technology/"> here </Link>
+        <Link target="_blank" className="docs_link" href="https://faucet.polygon.technology/"> here </Link>
         or
-        <Link className="docs_link" href="https://mumbaifaucet.com/"> here</Link>.
+        <Link target="_blank" className="docs_link" href="https://mumbaifaucet.com/"> here</Link>.
       </p>
       <p>
         For this level, you will not need LINK tokens to utilize Chainlink Price
@@ -45,7 +45,7 @@ function priceFeed() {
       <ul className="list-disc">
         <li>
           Basic knowledge of
-          <Link className="docs_link" href="https://docs.chain.link/data-feeds/price-feeds/">
+          <Link target="_blank" className="docs_link" href="https://docs.chain.link/data-feeds/price-feeds/">
             {" "}
             Chainlink Price Feeds
           </Link>
@@ -54,11 +54,11 @@ function priceFeed() {
         <li>
           Basic knowledge of Solidity and Remix. A beginner? No worries, you can
           go from zero to hero
-          <Link className="docs_link" href="https://www.youtube.com/watch?v=gyMwXuJrbJQ">here</Link>.
+          <Link target="_blank" className="docs_link" href="https://www.youtube.com/watch?v=gyMwXuJrbJQ">here</Link>.
         </li>
         <li>
           Understanding of
-          <Link className="docs_link" href="https://www.alchemy.com/overviews/solidity-interface">
+          <Link target="_blank" className="docs_link" href="https://www.alchemy.com/overviews/solidity-interface">
             {" "}
             interfaces{" "}
           </Link>
@@ -66,7 +66,7 @@ function priceFeed() {
         </li>
         <li>
           Understanding of
-          <Link className="docs_link" href="https://docs.alchemy.com/docs/solidity-payable-functions">
+          <Link target="_blank" className="docs_link" href="https://docs.alchemy.com/docs/solidity-payable-functions">
             {" "}
             payable functions{" "}
           </Link>
@@ -81,11 +81,11 @@ function priceFeed() {
       <p>
         In this level, the task is that you send 0.01 USD worth of MATIC to the
         manager contract using
-        <Link className="docs_link" href="https://docs.chain.link/data-feeds/price-feeds/addresses?network=polygon#Mumbai%20Testnet">
+        <Link target="_blank" className="docs_link" href="https://docs.chain.link/data-feeds/price-feeds/addresses?network=polygon#Mumbai%20Testnet">
           <strong> MATIC/USD </strong>
         </Link>
         Price Feeds. Chainiversity Level Manager contract is {" "}
-        <Link
+        <Link target="_blank"
           className="docs_link"
           href="https://mumbai.polygonscan.com/address/0xF6eA5735CF1315C7bb339f9c81D2AFeB800640E7"
         >
@@ -103,7 +103,7 @@ function priceFeed() {
       <p>
         The manager contract will also check if the first address parameter is
         the owner of the provided contract address using
-        <Link className="docs_link" href="https://docs.openzeppelin.com/contracts/4.x/api/access">
+        <Link target="_blank" className="docs_link" href="https://docs.openzeppelin.com/contracts/4.x/api/access">
           OpenZeppelin&#39;s Ownable imported contract
         </Link>
         .

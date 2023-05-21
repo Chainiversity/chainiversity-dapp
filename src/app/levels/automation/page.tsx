@@ -27,18 +27,18 @@ function automation() {
         Note that you must utilize Polygon Mumbai testnet in order to submit a
         solution contract. To pay for gas fees and contract creation, you must
         have test MATIC: reach MATIC faucet
-        <Link className="docs_link" href="https://faucet.polygon.technology/">
+        <Link target="_blank" className="docs_link" href="https://faucet.polygon.technology/">
           {" "}
           here{" "}
         </Link>
         or
-        <Link className="docs_link" href="https://mumbaifaucet.com/">
+        <Link target="_blank" className="docs_link" href="https://mumbaifaucet.com/">
           {" "}
           here
         </Link>
         . To use Chainlink services, you will need LINK token on the Mumbai
         testnet, reach the faucet
-        <Link className="docs_link" href="https://faucets.chain.link/mumbai">
+        <Link target="_blank" className="docs_link" href="https://faucets.chain.link/mumbai">
           {" "}
           here
         </Link>
@@ -50,7 +50,7 @@ function automation() {
       <ul className="list-disc">
         <li>
           Basic knowledge of
-          <Link
+          <Link target="_blank"
             className="docs_link"
             href="https://docs.chain.link/chainlink-automation/introduction"
           >
@@ -62,7 +62,7 @@ function automation() {
         <li>
           Basic knowledge of Solidity and Remix. A beginner? No worries, you can
           go from zero to hero
-          <Link
+          <Link target="_blank"
             className="docs_link"
             href="https://www.youtube.com/watch?v=gyMwXuJrbJQ"
           >
@@ -73,7 +73,7 @@ function automation() {
         </li>
         <li>
           Understanding of
-          <Link
+          <Link target="_blank"
             className="docs_link"
             href="https://www.alchemy.com/overviews/solidity-interface"
           >
@@ -90,7 +90,7 @@ function automation() {
       <p>
         In this level, you should create a function that will register your
         contract at the level manager contract whose address is {" "}
-        <Link
+        <Link target="_blank"
           className="docs_link"
           href="https://mumbai.polygonscan.com/address/0x770060AFfA4AabeaDb652e4ba8829F3506bAA3e2"
         >
@@ -126,7 +126,7 @@ function automation() {
       <p>
         The manager contract will also check if the first address parameter is
         the owner of the provided contract address using{" "}
-        <Link
+        <Link target="_blank"
           className="docs_link"
           href="https://docs.openzeppelin.com/contracts/4.x/api/access"
         >

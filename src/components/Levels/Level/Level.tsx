@@ -196,7 +196,10 @@ const Level: NextPage<Props> = ({
               />
             </svg>
           </div>
-          <Link href={`https://mumbai.polygonscan.com/address/${levelAddress}`}>{`${levelAddress.slice(0,7)}...${levelAddress.slice(-4)} - NFT Contract`}</Link>
+          <Link
+          target="_blank"
+          className="docs_link"
+          href={`https://mumbai.polygonscan.com/address/${levelAddress}`}>{`${levelAddress.slice(0,7)}...${levelAddress.slice(-4)} - NFT Contract`}</Link>
         </div>
 
         <LevelCard

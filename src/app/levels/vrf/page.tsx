@@ -18,7 +18,7 @@ function vrf() {
       <br />
       <p>
         In this level of Chainiversity, you will be asked to integrate{" "}
-        <Link
+        <Link target="_blank"
           href="https://docs.chain.link/vrf/v2/introduction/"
           className="docs_link"
         >
@@ -33,16 +33,16 @@ function vrf() {
         Note that you must utilize Polygon Mumbai testnet in order to submit a
         solution contract. To pay for gas fees and contract creation, you must
         have test MATIC: reach MATIC faucet{" "}
-        <Link className="docs_link" href="https://faucet.polygon.technology/">
+        <Link target="_blank" className="docs_link" href="https://faucet.polygon.technology/">
           here
         </Link>{" "}
         or{" "}
-        <Link className="docs_link" href="https://mumbaifaucet.com/">
+        <Link target="_blank" className="docs_link" href="https://mumbaifaucet.com/">
           here
         </Link>{" "}
         . To use Chainlink services, you will need LINK token on the Mumbai
         testnet, reach the faucet{" "}
-        <Link className="docs_link" href="https://faucets.chain.link/mumbai">
+        <Link target="_blank" className="docs_link" href="https://faucets.chain.link/mumbai">
           here
         </Link>{" "}
       </p>
@@ -55,7 +55,7 @@ function vrf() {
         <li>
           Basic knowledge of Solidity and Remix. A beginner? No worries, you can
           go from zero to hero{" "}
-          <Link
+          <Link target="_blank"
             className="docs_link"
             href="https://www.youtube.com/watch?v=gyMwXuJrbJQ"
           >
@@ -65,7 +65,7 @@ function vrf() {
         </li>
         <li>
           Understanding of{" "}
-          <Link
+          <Link target="_blank"
             className="docs_link"
             href="https://www.alchemy.com/overviews/solidity-interface"
           >
@@ -94,7 +94,7 @@ function vrf() {
         There is a level manager contract developed by Chainiversity team that
         will validate if your contract calls for a VRF output. 
         The Chainiversity Level Manager contract is {" "}
-        <Link
+        <Link target="_blank"
           className="docs_link"
           href="https://mumbai.polygonscan.com/address/0x8d10bf427bdd09ae935b61554d5034c4a5a8aa40"
         >
@@ -108,7 +108,7 @@ function vrf() {
         address is your EVM account address, and the second one is the address
         of your solution contract. The manager contract will check if the first
         address parameter is the owner of the provided contract address using{" "}
-        <Link
+        <Link target="_blank"
           className="docs_link"
           href="https://docs.openzeppelin.com/contracts/4.x/api/access"
         >
