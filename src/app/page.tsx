@@ -10,7 +10,7 @@ export default function Home() {
         <span className="blue_gradient">CHAINLINK</span> SKILLS
       </h1>
       <p className="desc text-center">
-        Chainlink your smart contracts, earn NFT certificates! LOL
+        Chainlink your smart contracts, earn NFT certificates!
       </p>
 
       <figure className="mx-auto text-center my-10 p-10">
