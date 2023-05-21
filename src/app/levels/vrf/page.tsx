@@ -11,6 +11,7 @@ function vrf() {
       levelName={"NFT Certificate - Chainlink VRF"}
       date={"13/05/23"}
       levelAddress={`${addresses.vrfAddress}` as `0x${string}`}
+      managerAddress="0x8d10BF427Bdd09AE935b61554D5034c4a5a8AA40"
     >
       <h1>
         <b>VRF Level</b>
