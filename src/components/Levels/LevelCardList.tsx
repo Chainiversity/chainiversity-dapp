@@ -21,7 +21,7 @@ function LevelCardList() {
           levelName="AUTOMATION"
           date="18/05/23"
           nftPhoto={automation}
-          levelDescription="Automation and Smart Contracts! Yes, Chainlink Automation combines those terms. Read the level instructions carefully, and certify your Automation knowledge."
+          levelDescription="Automation and Smart Contracts! Yes, Chainlink Automation combines those two terms. Read the level instructions carefully, and certify your Automation knowledge."
         />
       </div>
       <div className="w-full md:w-1/2 lg:w-1/3 mb-10 lg:mb-0 ">
