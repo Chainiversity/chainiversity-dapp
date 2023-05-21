@@ -45,6 +45,10 @@
   @apply max-sm:hidden text-2xl font-semibold text-black tracking-wide;
 }
 
+.footer_text {
+  @apply max-sm:hidden text-2xl font-semibold text-white tracking-wide;
+}
+
 .blue_gradient {
   @apply bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent;
 }

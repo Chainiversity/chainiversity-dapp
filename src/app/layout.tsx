@@ -16,6 +16,7 @@ import { WagmiConfig, configureChains, createConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 // chains and connectors
 import { polygonMumbai } from "wagmi/chains";
+import Footer from "@/components/Footer";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygonMumbai],
@@ -64,9 +65,7 @@ export default function RootLayout({
             <main className="app h-full">{children}</main>
 
             <div className="mt-20">
-            <footer className="fixed bottom-0 bg-gradient-to-r from-blue-700 to-blue-500 text-white p-2 w-screen z-50">
-              StickyFooter
-            </footer>
+              <Footer/>
             </div>
 
           </RainbowKitProvider>
