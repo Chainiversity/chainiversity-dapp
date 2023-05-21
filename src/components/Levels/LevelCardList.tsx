@@ -12,7 +12,7 @@ function LevelCardList() {
           levelName="VRF"
           date="13/05/23"
           nftPhoto={vrf}
-          levelDescription="Curious about retrieving cryptographically proven random value outputs? Chainlink VRF is the way to go for! You will be asked to get a simple VRF output in this level."
+          levelDescription="Curious about retrieving verifiable random outputs? Chainlink VRF is the way to go for! You will be asked to get a simple VRF output in this level to be eligible for an NFT certificate."
         />
       </div>
       <div className="w-full md:w-1/2 lg:w-1/3 mb-10 lg:mb-0">
