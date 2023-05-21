@@ -12,6 +12,7 @@ function LevelCardList() {
           levelName="VRF"
           date="13/05/23"
           nftPhoto={vrf}
+          levelDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dicta eum blanditiis voluptatum, quibusdam commodi unde possimus necessitatibus velit fugit illo tempora quaerat molestiae asperiores sequi ab. Vero, ea tempore."
         />
       </div>
       <div className="w-full md:w-1/2 lg:w-1/3 mb-10 lg:mb-0">
