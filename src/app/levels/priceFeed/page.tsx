@@ -1,7 +1,7 @@
 import React from "react";
 import Level from "@/components/Levels/Level";
 import feedPhoto from "public/assets/images/nfts/price-feed.jpg";
-import {addresses} from "../../../../contracts/addresses";
+import { addresses } from "../../../../contracts/addresses";
 import Link from "next/link";
 
 function priceFeed() {
@@ -10,9 +10,7 @@ function priceFeed() {
       nftPhoto={feedPhoto}
       levelName={"NFT Certificate - Chainlink Price Feed"}
       date={"13/05/23"}
-      levelAddress={
-        `${addresses.priceFeedAddress}` as `0x${string}`
-      }
+      levelAddress={`${addresses.priceFeedAddress}` as `0x${string}`}
     >
       <h1>
         <b>Price Feeds Level</b>
@@ -29,9 +27,24 @@ function priceFeed() {
         Note that you must utilize Polygon Mumbai testnet in order to submit a
         solution contract. To pay for gas fees and contract creation, you must
         have test MATIC: reach MATIC faucet
-        <Link target="_blank" className="docs_link" href="https://faucet.polygon.technology/"> here </Link>
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://faucet.polygon.technology/"
+        >
+          {" "}
+          here{" "}
+        </Link>
         or
-        <Link target="_blank" className="docs_link" href="https://mumbaifaucet.com/"> here</Link>.
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://mumbaifaucet.com/"
+        >
+          {" "}
+          here
+        </Link>
+        .
       </p>
       <p>
         For this level, you will not need LINK tokens to utilize Chainlink Price
@@ -45,7 +58,11 @@ function priceFeed() {
       <ul className="list-disc">
         <li>
           Basic knowledge of
-          <Link target="_blank" className="docs_link" href="https://docs.chain.link/data-feeds/price-feeds/">
+          <Link
+            target="_blank"
+            className="docs_link"
+            href="https://docs.chain.link/data-feeds/price-feeds/"
+          >
             {" "}
             Chainlink Price Feeds
           </Link>
@@ -53,12 +70,23 @@ function priceFeed() {
         </li>
         <li>
           Basic knowledge of Solidity and Remix. A beginner? No worries, you can
-          go from zero to hero
-          <Link target="_blank" className="docs_link" href="https://www.youtube.com/watch?v=gyMwXuJrbJQ">here</Link>.
+          go from zero to hero{" "}
+          <Link
+            target="_blank"
+            className="docs_link"
+            href="https://www.youtube.com/watch?v=gyMwXuJrbJQ"
+          >
+            here
+          </Link>
+          .
         </li>
         <li>
           Understanding of
-          <Link target="_blank" className="docs_link" href="https://www.alchemy.com/overviews/solidity-interface">
+          <Link
+            target="_blank"
+            className="docs_link"
+            href="https://www.alchemy.com/overviews/solidity-interface"
+          >
             {" "}
             interfaces{" "}
           </Link>
@@ -66,7 +94,11 @@ function priceFeed() {
         </li>
         <li>
           Understanding of
-          <Link target="_blank" className="docs_link" href="https://docs.alchemy.com/docs/solidity-payable-functions">
+          <Link
+            target="_blank"
+            className="docs_link"
+            href="https://docs.alchemy.com/docs/solidity-payable-functions"
+          >
             {" "}
             payable functions{" "}
           </Link>
@@ -81,40 +113,51 @@ function priceFeed() {
       <p>
         In this level, the task is that you send 0.01 USD worth of MATIC to the
         manager contract using
-        <Link target="_blank" className="docs_link" href="https://docs.chain.link/data-feeds/price-feeds/addresses?network=polygon#Mumbai%20Testnet">
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://docs.chain.link/data-feeds/price-feeds/addresses?network=polygon#Mumbai%20Testnet"
+        >
           <strong> MATIC/USD </strong>
         </Link>
-        Price Feeds. Chainiversity Level Manager contract is {" "}
-        <Link target="_blank"
+        Price Feeds. Chainiversity Level Manager contract is{" "}
+        <Link
+          target="_blank"
           className="docs_link"
           href="https://mumbai.polygonscan.com/address/0xF6eA5735CF1315C7bb339f9c81D2AFeB800640E7"
         >
           here
-        </Link>.
+        </Link>
+        .
       </p>
       <p>
         In order to send MATIC to the manager contract, use the following
         interface function:
-        <code> function receiveAnswer() external payable;</code>. 0.01 USD worth
+        <code> function receiveAnswer() external payable;</code> 0.01 USD worth
         of MATIC will be sent to the Manager contract, and you will be able to
         withdraw it.
       </p>
       <br />
       <p>
         The manager contract will also check if the first address parameter is
-        the owner of the provided contract address using
-        <Link target="_blank" className="docs_link" href="https://docs.openzeppelin.com/contracts/4.x/api/access">
+        the owner of the provided contract address using{" "}
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://docs.openzeppelin.com/contracts/4.x/api/access"
+        >
           OpenZeppelin&#39;s Ownable imported contract
         </Link>
         .
         <strong>
+          {" "}
           Be careful here: the owner of the contract will be able to claim the
           NFT certificate.
         </strong>
         , so you must import
         <code>Ownable.sol</code>. Make sure that the owner of the contract sends
         the transaction when calling the interface function
-        <code> function receiveAnswer() external payable;</code>.
+        <code> function receiveAnswer() external payable;</code>
       </p>
       <br />
       <h3>

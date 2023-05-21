@@ -1,7 +1,7 @@
 import React from "react";
 import Level from "@/components/Levels/Level";
 import automationPhoto from "public/assets/images/nfts/automation.jpg";
-import {addresses} from "../../../../contracts/addresses";
+import { addresses } from "../../../../contracts/addresses";
 import Link from "next/link";
 
 function automation() {
@@ -10,9 +10,7 @@ function automation() {
       nftPhoto={automationPhoto}
       levelName={"NFT Certificate - Chainlink Automation"}
       date={"13/05/23"}
-      levelAddress={
-        `${addresses.automationAddress}` as `0x${string}`
-      }
+      levelAddress={`${addresses.automationAddress}` as `0x${string}`}
     >
       <h1>
         <b>Automation Level</b>
@@ -27,20 +25,32 @@ function automation() {
         Note that you must utilize Polygon Mumbai testnet in order to submit a
         solution contract. To pay for gas fees and contract creation, you must
         have test MATIC: reach MATIC faucet
-        <Link target="_blank" className="docs_link" href="https://faucet.polygon.technology/">
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://faucet.polygon.technology/"
+        >
           {" "}
           here{" "}
         </Link>
         or
-        <Link target="_blank" className="docs_link" href="https://mumbaifaucet.com/">
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://mumbaifaucet.com/"
+        >
           {" "}
           here
         </Link>
         . To use Chainlink services, you will need LINK token on the Mumbai
         testnet, reach the faucet
-        <Link target="_blank" className="docs_link" href="https://faucets.chain.link/mumbai">
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://faucets.chain.link/mumbai"
+        >
           {" "}
-          here
+          here.
         </Link>
       </p>
       <br />
@@ -50,7 +60,8 @@ function automation() {
       <ul className="list-disc">
         <li>
           Basic knowledge of
-          <Link target="_blank"
+          <Link
+            target="_blank"
             className="docs_link"
             href="https://docs.chain.link/chainlink-automation/introduction"
           >
@@ -61,19 +72,20 @@ function automation() {
         </li>
         <li>
           Basic knowledge of Solidity and Remix. A beginner? No worries, you can
-          go from zero to hero
-          <Link target="_blank"
+          go from zero to hero{" "}
+          <Link
+            target="_blank"
             className="docs_link"
             href="https://www.youtube.com/watch?v=gyMwXuJrbJQ"
           >
-            {" "}
             here
           </Link>
           .
         </li>
         <li>
           Understanding of
-          <Link target="_blank"
+          <Link
+            target="_blank"
             className="docs_link"
             href="https://www.alchemy.com/overviews/solidity-interface"
           >
@@ -89,15 +101,16 @@ function automation() {
       </h2>
       <p>
         In this level, you should create a function that will register your
-        contract at the level manager contract whose address is {" "}
-        <Link target="_blank"
+        contract at the level manager contract whose address is{" "}
+        <Link
+          target="_blank"
           className="docs_link"
           href="https://mumbai.polygonscan.com/address/0x770060AFfA4AabeaDb652e4ba8829F3506bAA3e2"
         >
           here
-        </Link> {" "}
+        </Link>{" "}
         using the interface
-        <code> function registerContract() external;</code>. Registering is
+        <code> function registerContract() external;</code> Registering is
         essential in order to pass the level.
       </p>
       <p>
@@ -126,7 +139,8 @@ function automation() {
       <p>
         The manager contract will also check if the first address parameter is
         the owner of the provided contract address using{" "}
-        <Link target="_blank"
+        <Link
+          target="_blank"
           className="docs_link"
           href="https://docs.openzeppelin.com/contracts/4.x/api/access"
         >

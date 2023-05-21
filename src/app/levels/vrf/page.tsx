@@ -1,7 +1,7 @@
 import React from "react";
 import Level from "@/components/Levels/Level";
 import vrfPhoto from "public/assets/images/nfts/vrf.jpg";
-import {addresses} from "../../../../contracts/addresses";
+import { addresses } from "../../../../contracts/addresses";
 import Link from "next/link";
 
 function vrf() {
@@ -18,7 +18,8 @@ function vrf() {
       <br />
       <p>
         In this level of Chainiversity, you will be asked to integrate{" "}
-        <Link target="_blank"
+        <Link
+          target="_blank"
           href="https://docs.chain.link/vrf/v2/introduction/"
           className="docs_link"
         >
@@ -33,16 +34,28 @@ function vrf() {
         Note that you must utilize Polygon Mumbai testnet in order to submit a
         solution contract. To pay for gas fees and contract creation, you must
         have test MATIC: reach MATIC faucet{" "}
-        <Link target="_blank" className="docs_link" href="https://faucet.polygon.technology/">
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://faucet.polygon.technology/"
+        >
           here
         </Link>{" "}
         or{" "}
-        <Link target="_blank" className="docs_link" href="https://mumbaifaucet.com/">
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://mumbaifaucet.com/"
+        >
           here
-        </Link>{" "}
+        </Link>
         . To use Chainlink services, you will need LINK token on the Mumbai
         testnet, reach the faucet{" "}
-        <Link target="_blank" className="docs_link" href="https://faucets.chain.link/mumbai">
+        <Link
+          target="_blank"
+          className="docs_link"
+          href="https://faucets.chain.link/mumbai"
+        >
           here
         </Link>{" "}
       </p>
@@ -55,17 +68,19 @@ function vrf() {
         <li>
           Basic knowledge of Solidity and Remix. A beginner? No worries, you can
           go from zero to hero{" "}
-          <Link target="_blank"
+          <Link
+            target="_blank"
             className="docs_link"
             href="https://www.youtube.com/watch?v=gyMwXuJrbJQ"
           >
             here
-          </Link>{" "}
+          </Link>
           .
         </li>
         <li>
           Understanding of{" "}
-          <Link target="_blank"
+          <Link
+            target="_blank"
             className="docs_link"
             href="https://www.alchemy.com/overviews/solidity-interface"
           >
@@ -79,7 +94,7 @@ function vrf() {
         <b>Level Task</b>
       </h2>
       <p>
-        In order to pass this level, the task is very simple:
+        In order to pass this level, the task is very simple:{" "}
         <strong>
           getting a VRF output from the Chainlink network with subscription
           method
@@ -92,33 +107,37 @@ function vrf() {
       <br />
       <p>
         There is a level manager contract developed by Chainiversity team that
-        will validate if your contract calls for a VRF output. 
-        The Chainiversity Level Manager contract is {" "}
-        <Link target="_blank"
+        will validate if your contract calls for a VRF output. The Chainiversity
+        Level Manager contract is{" "}
+        <Link
+          target="_blank"
           className="docs_link"
           href="https://mumbai.polygonscan.com/address/0x8d10bf427bdd09ae935b61554d5034c4a5a8aa40"
         >
           here
-        </Link>.
+        </Link>
+        .
       </p>
       <p>
         In order for the manager contract to check if you passed the level, you
         must implement the interface:
-        <code> function checkAnswer(address, address) external;</code>. The first
+        <code> function checkAnswer(address, address) external;</code> The first
         address is your EVM account address, and the second one is the address
         of your solution contract. The manager contract will check if the first
         address parameter is the owner of the provided contract address using{" "}
-        <Link target="_blank"
+        <Link
+          target="_blank"
           className="docs_link"
           href="https://docs.openzeppelin.com/contracts/4.x/api/access"
         >
           OpenZeppelin&#39;s Ownable imported contract
-        </Link>{" "}
+        </Link>
         .
         <strong>
+          {" "}
           Be careful here: the owner of the contract will be able to claim the
           NFT certificate.
-        </strong>
+        </strong>{" "}
         If your transaction is not reverted, you will be able to claim your NFT
         certificate with the mint button on this page.
       </p>
@@ -128,11 +147,10 @@ function vrf() {
         <b>Some tips</b>
       </h2>
       <p>
-        Knowing where to implement the
-        <code>checkAnswer()</code>
-        interface function is important. There are two types of functions that
-        need to be implemented in a VRF contract, try to think of where to call
-        the function from the manager contract.
+        Knowing where to implement the <code>checkAnswer()</code> interface
+        function is important. There are two types of functions that need to be
+        implemented in a VRF contract, try to think of where to call the
+        function from the manager contract.
       </p>
       <p>
         As validating the contract will consume some amount of gas, you may
