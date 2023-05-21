@@ -17,6 +17,7 @@ function Footer() {
       <ul className="flex-center space-x-5">
         <li>
           <Link
+            target="_blank"
             href="https://twitter.com/chainiversity"
             className="text-white"
           >
@@ -32,6 +33,7 @@ function Footer() {
         </li>
         <li>
           <Link
+            target="_blank"
             href="https://github.com/Chainiversity/chainiversity-dapp"
             className="text-white"
           >
