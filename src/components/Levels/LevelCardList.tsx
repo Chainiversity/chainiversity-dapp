@@ -12,7 +12,7 @@ function LevelCardList() {
           levelName="VRF"
           date="13/05/23"
           nftPhoto={vrf}
-          levelDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dicta eum blanditiis voluptatum, quibusdam commodi unde possimus necessitatibus velit fugit illo tempora quaerat molestiae asperiores sequi ab. Vero, ea tempore."
+          levelDescription="Curious about retrieving cryptographically proven random value outputs? Chainlink VRF is the way to go for! You will be asked to get a simple VRF output in this level."
         />
       </div>
       <div className="w-full md:w-1/2 lg:w-1/3 mb-10 lg:mb-0">
@@ -21,6 +21,7 @@ function LevelCardList() {
           levelName="AUTOMATION"
           date="18/05/23"
           nftPhoto={automation}
+          levelDescription="Automation and Smart Contracts! Yes, Chainlink Automation combines those terms. Read the level instructions carefully, and certify your Automation knowledge."
         />
       </div>
       <div className="w-full md:w-1/2 lg:w-1/3 mb-10 lg:mb-0 ">
@@ -29,6 +30,7 @@ function LevelCardList() {
           levelName="PRICE FEED"
           date="14/05/23"
           nftPhoto={priceFeed}
+          levelDescription="You’re invited to this level if you’re interested in getting price data in a trust-minimized manner using Chainlink Price Feeds. Show your knowledge of Chainlink and Solidity!"
         />
       </div>
     </div>
