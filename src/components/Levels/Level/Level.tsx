@@ -129,7 +129,6 @@ const LevelButtons: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
       </ConnectButton.Custom>
     );
   }
-  console.log(contractData?.[0].result, contractData?.[1].result);
   return (
     <>
       {!contractData?.[0].result && (
@@ -185,7 +184,7 @@ const Level: NextPage<Props> = ({
   return (
     <section className="w-full md:flex space-y-10 md:space-y-4">
       <div className="lg:w-3/8 md:w-4/8 space-y-6">
-      <div className="w-full px-1 md:px-4 space-x-4 flex items-center">
+        <div className="w-full px-1 md:px-4 space-x-4 flex items-center">
           <div className="w-8">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
               <path
