@@ -9,9 +9,9 @@ function automation() {
     <Level
       nftPhoto={automationPhoto}
       levelName={"NFT Certificate - Chainlink Automation"}
-      date={"13/05/23"}
       levelAddress={`${addresses.automationAddress}` as `0x${string}`}
       managerAddress="0x770060AFfA4AabeaDb652e4ba8829F3506bAA3e2"
+      levelURL="automation"
     >
       <h1>
         <b>Automation Level</b>

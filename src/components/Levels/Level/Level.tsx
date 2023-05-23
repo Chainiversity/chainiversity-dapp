@@ -166,7 +166,7 @@ const LevelButtons: NextPage<LevelButtonsProps> = ({ levelAddress }) => {
 interface Props {
   nftPhoto: StaticImageData; // TODO: NFT URI
   levelName: string;
-  date: string;
+  levelURL: string;
   levelAddress: `0x${string}`;
   managerAddress: `0x${string}`;
   children: React.ReactNode;
@@ -175,10 +175,10 @@ interface Props {
 const Level: NextPage<Props> = ({
   nftPhoto,
   levelName,
-  date,
   levelAddress,
   managerAddress,
   children,
+  levelURL,
 }) => {
   return (
     <section className="w-full md:flex space-y-10 md:space-y-4">
@@ -228,9 +228,8 @@ const Level: NextPage<Props> = ({
           </div>
         </div>
         <LevelCard
-          levelAddress={levelAddress}
+          levelURL={levelURL}
           levelName={levelName}
-          date={date}
           nftPhoto={nftPhoto}
         />
         <div className="w-full px-1 md:px-4 space-y-2">
