@@ -19,7 +19,7 @@ export default function Home() {
             &quot;Do you want to enhance your Solidity development skills? Do
             you want to learn how to integrate Chainlink services in your smart
             contracts? Do you want to certify your knowledge of Solidity and
-            Chainlink? Then, Chainiversity is the right place for you!
+            Chainlink? Then, Chainiversity is the right place for you!&quot;
           </p>
         </blockquote>
       </figure>
