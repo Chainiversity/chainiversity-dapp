@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
 import LevelCard from "../LevelCard";
 import { NextPage } from "next";
@@ -180,8 +181,25 @@ const Level: NextPage<Props> = ({
   children,
   levelURL,
 }) => {
+  const toVisible = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+      },
+    },
+  };
+
   return (
-    <section className="w-full md:flex space-y-10 md:space-y-4">
+    <motion.section
+      variants={toVisible}
+      initial="hidden"
+      animate="visible"
+      className="w-full md:flex space-y-10 md:space-y-4"
+    >
       <div className="lg:w-3/8 md:w-4/8 space-y-6">
         <div className="mt-5">
           <div className="w-full px-1 md:px-4 space-x-4 flex items-center">
@@ -241,7 +259,7 @@ const Level: NextPage<Props> = ({
           {children}
         </article>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
