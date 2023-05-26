@@ -38,7 +38,7 @@ export default function Home() {
       opacity: 1,
       transition: {
         delay: 1,
-        duration: 2,
+        duration: 1,
       },
     },
   };

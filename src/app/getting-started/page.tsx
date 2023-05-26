@@ -86,7 +86,7 @@ export default function GettingStarted() {
       opacity: 1,
       transition: {
         delay: 1,
-        duration: 2,
+        duration: 1,
       },
     },
   };
