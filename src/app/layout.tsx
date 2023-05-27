@@ -17,6 +17,7 @@ import { publicProvider } from "wagmi/providers/public";
 // chains and connectors
 import { polygonMumbai } from "wagmi/chains";
 import Footer from "@/components/Footer";
+import Banner from "@/components/Banner";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygonMumbai],
@@ -56,21 +57,20 @@ export default function RootLayout({
       <body className={`${inter.className} h-full min-h-screen`}>
         <div className="main">
           <div className="gradient" />
-        </div> 
+        </div>
         <WagmiConfig config={config}>
           <RainbowKitProvider modalSize="compact" chains={chains}>
+            <Banner />
             <header>
               <Nav />
             </header>
             <main className="app h-full">{children}</main>
-
             <div className="mt-20">
-              <Footer/>
+              <Footer />
             </div>
-
           </RainbowKitProvider>
         </WagmiConfig>
       </body>
-    </html> 
+    </html>
   );
 }

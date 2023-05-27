@@ -9,9 +9,9 @@ function priceFeed() {
     <Level
       nftPhoto={feedPhoto}
       levelName={"NFT Certificate - Chainlink Price Feed"}
-      date={"13/05/23"}
       levelAddress={`${addresses.priceFeedAddress}` as `0x${string}`}
       managerAddress="0xF6eA5735CF1315C7bb339f9c81D2AFeB800640E7"
+      levelURL="priceFeed"
     >
       <h1>
         <b>Price Feeds Level</b>

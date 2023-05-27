@@ -5,22 +5,20 @@ import { NextPage } from "next";
 interface Props {
   nftPhoto: StaticImageData; // TODO: NFT URI
   levelName: string;
-  date: string;
-  levelAddress: string;
+  levelURL: string;
   levelDescription?: string;
 }
 
 const LevelCard: NextPage<Props> = ({
   nftPhoto,
   levelName,
-  date,
-  levelAddress,
+  levelURL,
   levelDescription = "",
 }) => {
   return (
     <div className="w-full my-1 md:my-4 px-1 md:px-4">
       <article className="overflow-hidden rounded-lg shadow-lg">
-        <Link href={`/levels/${levelAddress}`}>
+        <Link href={`/levels/${levelURL}`}>
           <Image
             className="block h-auto w-full"
             src={nftPhoto}
@@ -31,7 +29,7 @@ const LevelCard: NextPage<Props> = ({
         <div className="p-5">
           <h3 className="text-base text-center font-bold w-full">
             <Link
-              href={`/levels/${levelAddress}`}
+              href={`/levels/${levelURL}`}
               className="no-underline hover:underline text-black"
             >
               {levelName} LEVEL
