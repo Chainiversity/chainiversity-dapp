@@ -28,7 +28,7 @@ contract PriceFeedManager {
         NFTContract = _nftContract;
     }
 
-    function getLatestPrice() public view returns (int) {
+    function getLatestPrice() private view returns (int) {
         (
             /* uint80 roundID */,
             int price,
@@ -43,7 +43,7 @@ contract PriceFeedManager {
         decimals = priceFeed.decimals();
     }
 
-    function getValidatedValue() public view returns (uint256){
+    function getValidatedValue() private view returns (uint256){
         uint256 price = uint256(getLatestPrice());
         uint256 value = ((10**18 * 1*10**(getDecimals()-2)) / (price));
         return value;
