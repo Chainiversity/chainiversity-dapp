@@ -83,7 +83,7 @@ export default function GettingStarted() {
   };
 
   return (
-    <section className="w-full flex items-center flex-col">
+    <section className="w-full flex items-center flex-col mt-12 mb-40">
       <motion.h1
         variants={toRight}
         initial="start"
